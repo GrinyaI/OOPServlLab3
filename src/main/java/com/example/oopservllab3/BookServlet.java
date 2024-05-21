@@ -39,17 +39,13 @@ public class BookServlet extends HttpServlet {
             return;
         }
 
-        // Преобразование JSON-строки в JSONObject
         JSONObject newBooksJson = new JSONObject(jsonRequest.toString());
 
-        // Добавление нового автомобиля в список
         JSONArray booksArray = new JSONArray(readFromFile());
         booksArray.put(newBooksJson);
 
-        // Запись обновленного списка автомобилей в файл
         writeToFile(booksArray.toString());
 
-        // Отправка обновленного списка автомобилей
         response.getWriter().write(booksArray.toString());
     }
 

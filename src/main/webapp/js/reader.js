@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const bookList = document.getElementById('booksList');
 
-    // Загрузка списка автомобилей при загрузке страницы
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://localhost:8081/OOPServlLab3_war_exploded/books', true);
 
